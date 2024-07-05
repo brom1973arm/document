@@ -1,0 +1,830 @@
+@charset "utf-8";
+body{
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-jp-<uniquifier> { */
+  font-family: "Noto Sans JP", "Noto Serif JP", sans-serif;
+  /* font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; */
+}
+
+header {
+  height:51px;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: 1000;
+  color: #b71b26;
+  padding: 16px 118px 16px 12px;
+}
+h2 {
+  font-size: 28px;
+  font-family: 'Noto Serif JP';
+  margin-top: 20px;
+  /* width: 375px; */
+  text-align: center;
+  letter-spacing: .07em;
+  text-transform:uppercase;
+  font-weight: bold;
+
+}
+h3 {
+  font-size: 20px;
+  letter-spacing: .1em;
+  margin: 24px 0 16px;
+  text-align: center;
+}
+h4 {
+  font-size: 20px;
+  font-family: 'Noto Serif JP';
+  text-align: center;
+  margin: 8px auto;
+}
+h5 {
+  font-size: 12px;
+  font-family: 'Noto Serif JP';
+  margin: 0 auto;
+  padding: 0 0 24px;
+  width: 375;
+  text-align: center;
+  letter-spacing: .1em;
+  color: #223e69;
+}
+
+/* 以下、横線を入れる方法はサイトを参考 */
+.catch1 {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: center; /* 水平中心 */
+}
+.catch1:before, .catch1:after {
+  border-top: 1px solid;
+  content: "";
+  width: 3em; /* 線の長さ */
+}
+.catch1:before {
+  margin-right: 1em; /* 文字の右隣 */
+}
+.catch1:after {
+  margin-left: 1em; /* 文字の左隣 */
+}
+
+header nav ul {
+  font-size: 16px;
+  font-family: 'Noto Serif JP';
+  /* margin: 0 auto;
+  width: 375px; */
+}
+.heroSec {
+  height: 480px;
+  background: url(../images/hero\ 3.png) no-repeat right center/cover;
+  width: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.innerWrap {
+  border: 4px solid lightblue;
+}
+.ccptSec p {
+  font-size: 14px;
+  font-weight: 350;
+  letter-spacing: .16em;
+  line-height: 2;
+  width: 351px;
+  margin: 0 auto;
+}
+
+.svcSec img {
+  width: 100%;
+}
+.svcSec .p {
+  width: 351px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1.5; /* 行間の調節（p/137） */
+  letter-spacing: .06em; /* 文字間隔の調整（p.161） */
+}
+.svcSec .more {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  font-weight: 350;
+  letter-spacing: .14em;
+  margin-bottom: 8px;
+}
+.flowSec .flow {
+  text-align: center;
+}
+.triangle3-1 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.6);
+  margin-left: 170px;
+}
+.triangle3-2 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.7);
+  margin-left: 170px;
+}
+.triangle3-3 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.8);
+  margin-left: 170px;
+}
+.triangle3-4 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.9);
+  margin-left: 170px;
+}
+.triangle3-5 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,1);
+  margin-left: 170px;
+}
+.flow p {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 3px 0;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: 8px auto;
+  width: 300px;
+}
+.flowSec {
+  background-color: rgba(34,62,105,.05);
+}
+.flowSec h5 {
+  color: #b71b26;
+}
+.svcSec img {
+  height: 246px;
+  width: 100%;
+  padding:0 10px;
+}
+.ctcSec {
+  background-color: rgba(34,62,105,.15);
+}
+.ctcSec h5 {
+  color: #333333;
+}
+
+.faqSec .q {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #333333;
+  color: #ffffff;
+  display: inline;
+  padding: 2px 5px;
+  border-radius: 52%;
+  text-transform: uppercase;
+  font-family: 'Noto Serif JP'; 
+  width: 36px;
+  height: 36px;
+}
+.faqSec .a {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #b71b26;
+  color: #ffffff;
+  display: inline;
+  padding: 2px 5px;
+  border-radius: 52%;
+  text-transform: uppercase;
+  font-family: 'Noto Serif JP'; 
+  width: 36px;
+  height: 36px;
+}
+.faq {
+  width: 351px;
+  margin: 0 auto 80px;
+  padding: 0 0 0 40px;
+  position: relative;
+}
+.faq p {
+  margin-bottom: 16px;
+}
+.faq .q1 {
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.faq .a1 {
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+.faq .q2 {
+  position: absolute;
+  left: 0;
+  top: 110px;
+}
+.faq .a2 {
+  position: absolute;
+  left: 0;
+  top: 170px;
+}
+.formContents {
+  width: 351px;
+  margin: 0 auto;
+  /* text-align: center; */
+  position: relative;
+}
+.content1 {
+  position: absolute;
+  left: 160px;
+  top: 40px;
+}
+.content2 {
+  position: absolute;
+  left: 50px;
+  top: 60px;
+}
+.content3 {
+  position: absolute;
+  left: 70px;
+  top: 100px;
+}
+.content4 {
+  position: absolute;
+  left: 70px;
+  top: 145px;
+}
+.content5 {
+  position: absolute;
+  left: 25px;
+  top: 190px;
+}
+.content6 {
+  position: absolute;
+  left: 120px;
+  top: 276px;
+}
+.content7 {
+  position: absolute;
+  left: 175px;
+  top: 320px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="postal_code"],
+textarea {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  width: 100%;
+  margin-top: 5px;
+  padding: 0 12px;
+}
+/* ラジオボタンの調整（p.181） */
+input [type="radio"] {
+  width: 16px;
+  height: 16px;
+  vertical-align: baseline;
+  margin-right: 4px;
+}
+.typeRadio {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+textarea {
+  height: 120px;
+}
+.formContents .must {
+  display: inline; /* インラインスタイルに変更 */
+  background-color: #b71b26; /* 背景色を赤に */
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 15px;
+  color: #ffffff;
+  letter-spacing: .16em; /* 文字間隔を1.2に調整 */
+  border-radius: 20px;
+}
+.submitBtn {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  font-family: 'Noto Serif JP';
+}
+input[type="submit"] {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 16px;
+  margin: 16px;
+}
+.typeRadio {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight:normal;
+}
+input[type="submit"]:hover {
+  background-color: #c7887f;
+  margin-left: 20px;
+  transition-property: background-cplor,margin-left;
+  transition-duration: 300em;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color: #ffffff #ffffff transparent transparent;
+  transform: rotate(-45deg);
+}
+.toppageSec {
+  background-color: #333333;
+  width: 46px;
+  height: 46px;
+}
+
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  height: 45px;
+  padding: 12px 10px 20px;
+}
+
+/* メニューを画面上部に固定表示しています */
+.gMenu {
+  /* position: fixed; */
+  right: 0;
+  top: 0;
+  width: 100%;
+  /* z-index: 99; */
+}
+/* メニューアイコンを画面右上に固定しています */
+.gMenu .menu-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  padding-top: 5px;
+  height: 12px;
+}
+/* ハンバーガーメニュー */
+/* メニューアイコン（三本線）の真ん中の線です */
+.gMenu .menu-icon .navicon {
+  background: #ffc107; /* 色は自由に変更可能です */
+  display: block;
+  height: 2px; /* 太さ */
+  width: 31px; /* 長さ */
+  position: relative;
+  transition: background .4s ease-out; /* 形が変わる時のアニメーション */
+}
+/* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+.gMenu .menu-icon .navicon::before,
+.gMenu .menu-icon .navicon::after {
+  background: #ffc107; /* 色は自由に変更可能です */
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .4s ease-out; /* 形が変わる時のアニメーション */
+  width: 100%;
+}
+.gMenu .menu-icon .navicon::before {top: 10px;} /* 位置を上にずらしています */
+.gMenu .menu-icon .navicon::after {top: -10px;} /* 位置を下にずらしています */
+/* 表示されるメニューです */
+.gMenu .menu {
+  background-color: rgba(255,255,255,0.9);
+  overflow: hidden;
+  max-height: 0; /* ★最初は高さを0にして非表示状態に */
+  transition: max-height .6s; /* 表示されるときのアニメーション */
+  text-align: center;
+}
+/* メニュー部分のデザインです */
+.gMenu .menu li:first-of-type {
+  padding-top: 50px;
+}
+.gMenu .menu li a {
+  display: block;
+  padding: 24px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.gMenu .menu li a:hover {
+  background-color: #f4f4f4;
+}
+/* チェックボックスは常に非表示です */
+.gMenu .menu-btn {
+  display: none;
+}
+/* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+.gMenu .menu-btn:checked ~ .menu {
+  max-height: 338px; /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+  transition: max-height .6s;
+}
+/* メニューボタンの中央の線を非表示に */
+.gMenu .menu-btn:checked ~ .menu-icon .navicon {background: transparent;}
+
+/* メニューボタンの上下の線を45度傾けて✕印を作ります */
+.gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: rotate(-45deg);top: 0;}
+.gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: rotate(45deg);top: 0;}
+/* 3本線の色味を変更する */
+.gMenu .menu-icon {
+  top: 26px;
+}
+.gMenu .menu-icon .navicon,
+.gMenu .menu-icon .navicon::before,
+.gMenu .menu-icon .navicon::after {
+  background-color: #b71b26;
+}
+
+@media screen and (min-width: 768px)  {
+body {
+  width: 1366px;
+}
+/* メニューを画面上部に固定表示しています */
+.gMenu {
+  /* position: fixed; */
+  right: initial;
+  top: initial;
+  width: initial;
+  /* z-index: 99; */
+}
+/* メニューアイコンを画面右上に固定しています */
+.gMenu .menu-icon {
+  cursor: initial;
+  position: initial;
+  right: initial;
+  top: initial;
+  padding-top: initial;
+  height: initial;
+}
+/* ハンバーガーメニュー */
+/* メニューアイコン（三本線）の真ん中の線です */
+.gMenu .menu-icon .navicon {
+  background: initial; /* 色は自由に変更可能です */
+  display: initial;
+  height: initial; /* 太さ */
+  width: initial; /* 長さ */
+  position: initial;
+  transition: initial; /* 形が変わる時のアニメーション */
+}
+/* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+.gMenu .menu-icon .navicon::before,
+.gMenu .menu-icon .navicon::after {
+  background: initial; /* 色は自由に変更可能です */
+  content: initial;
+  display: initial;
+  height: initial;
+  position: initial;
+  transition: initial; /* 形が変わる時のアニメーション */
+  width: initial;
+}
+.gMenu .menu-icon .navicon::before {top: initial;} /* 位置を上にずらしています */
+.gMenu .menu-icon .navicon::after {top: initial;} /* 位置を下にずらしています */
+/* 表示されるメニューです */
+.gMenu .menu {
+  background-color: initial;
+  overflow: initial;
+  max-height: initial; /* ★最初は高さを0にして非表示状態に */
+  transition: initial; /* 表示されるときのアニメーション */
+  text-align: initial;
+}
+/* メニュー部分のデザインです */
+.gMenu .menu li:first-of-type {
+  padding-top: initial;
+}
+.gMenu .menu li a {
+  display: initial;
+  padding: initial;
+  text-decoration: initial;
+  text-transform: initial;
+}
+.gMenu .menu li a:hover {
+  background-color: initial;
+}
+/* チェックボックスは常に非表示です */
+.gMenu .menu-btn {
+  display: none;
+}
+/* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+.gMenu .menu-btn:checked ~ .menu {
+  max-height: initial; /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+  transition: initial;
+}
+/* メニューボタンの中央の線を非表示に */
+.gMenu .menu-btn:checked ~ .menu-icon .navicon {background: initial;}
+
+/* メニューボタンの上下の線を45度傾けて✕印を作ります */
+.gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: initial;}
+.gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: initial;}
+/* 3本線の色味を変更する */
+.gMenu .menu-icon {
+  top: initial;
+}
+.gMenu .menu-icon .navicon,
+.gMenu .menu-icon .navicon::before,
+.gMenu .menu-icon .navicon::after {
+  background-color: initial;
+}
+/* header .innerWrap {
+  background-color: #ffffff;
+  position: fixed;
+  height: 52px;
+  z-index: 100;
+} */
+header .innerWrap {
+  display: flex;
+}
+ul {
+  display: flex;
+}
+
+nav.gMenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+h1 {
+  width: 100%;
+  font-size: 20px;
+}
+h1 p {
+  letter-spacing: 0.1em;
+}
+.heroSec.innerWap .img {
+  height: 545px;
+  width: 100%;
+}
+.heroSec {
+  height: 545px;
+  background: url(../images/hero\ 2.png) no-repeat right center/cover;
+  width: auto;
+}
+.svcSec .flex {
+  display: flex;
+  justify-content: center;
+}
+.bathroom {
+  width: 300px;
+  padding: 0 30px 0 0;
+}
+.livingroom {
+  width: 300px;
+  padding: 0 30px 0 0;
+}.kitchen {
+  width: 300px;
+  padding: 0 30px 0 0;
+}
+.flex img {
+  height: 210px;
+}
+.ccptSec p {
+  font-size: 16px;
+  font-weight: 350;
+  letter-spacing: .16em;
+  line-height: 2;
+  width: 1020px;
+  margin: 0 auto 160px;
+}
+.triangle3-1 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.6);
+  margin-left: 20px;
+  margin-top: 150px;
+  transform: rotate(-90deg)
+}
+.triangle3-2 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.7);
+  margin-left: 20px;
+  margin-top: 150px;
+  transform: rotate(-90deg);
+}
+.triangle3-3 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.8);
+  margin-left: 20px;
+  margin-top: 150px;
+  transform: rotate(-90deg);
+}
+.triangle3-4 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.9);
+  margin-left: 20px;
+  margin-top: 150px;
+  transform: rotate(-90deg);
+}
+.triangle3-5 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,1);
+  margin-left: 20px;
+  margin-top: 150px;
+  transform: rotate(-90deg);
+}
+.flow {
+  display:flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 48px;
+}
+.flow p {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 97px 16px;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: 8px 20px;
+  width: 60px;
+  height: 280px;
+}
+.faqSec p {
+  font-size: 16px;
+  font-weight: 350;
+  letter-spacing: .16em;
+  line-height: 2;
+  width: 1020px;
+  margin: 0 auto;
+}
+.faq {
+  width: 1020px;
+  margin: 0 auto 80px;
+  padding: 0 0 0 40px;
+  position: relative;
+}
+.faq p {
+  margin-bottom: 16px;
+}
+.faq .q1 {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  margin-bottom: 16px;
+}
+.faq .a1 {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  margin-bottom: 48px;
+}
+.faq .q2 {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  margin-bottom: 16px;
+}
+.faq .a2 {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  margin-bottom: 160px;
+}
+.faqSec .q {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #333333;
+  color: #ffffff;
+  display: inline;
+  padding: 3px 4px;
+  border-radius: 52%;
+  text-transform: uppercase;
+  font-family: 'Noto Serif JP'; 
+  width: 52px;
+  height: 52px;
+}
+.faqSec .a {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #b71b26;
+  color: #ffffff;
+  display: inline;
+  padding: 3px 4px;
+  border-radius: 52%;
+  text-transform: uppercase;
+  font-family: 'Noto Serif JP'; 
+  width: 52px;
+  height: 52px;
+}
+.formContents {
+  width: 1020px;
+  height: 1000px;
+  padding: 48px 0;
+  background-color: #ffffff75;
+  position:relative;
+}
+.content1 {
+  position: absolute;
+  left: 160px;
+  top: 50px;
+}
+.content2 {
+  position: absolute;
+  left: 70px;
+  top: 120px;
+}
+.content3 {
+  position: absolute;
+  left: 80px;
+  top: 175px;
+}
+.content4 {
+  position: absolute;
+  left: 80px;
+  top: 225px;
+}
+.content5 {
+  position: absolute;
+  left: 50px;
+  top: 335px;
+}
+.content6 {
+  position: absolute;
+  left: 145px;
+  top: 390px;
+}
+.content7 {
+  position: absolute;
+  left: 220px;
+  top: 445px;
+}
+.ctcSec {
+  background-color: #223e6931;
+}
+h2 {
+  font-size: 28px;
+  font-family: 'Noto Serif JP';
+  margin-top: 20px;
+  /* width: 375px; */
+  text-align: center;
+  letter-spacing: .07em;
+  text-transform:uppercase;
+  font-weight: bold;
+}
+h3 {
+  font-size: 20px;
+  letter-spacing: .1em;
+  margin: 24px 0 16px;
+  text-align: center;
+}
+h4 {
+  font-size: 20px;
+  font-family: 'Noto Serif JP';
+  text-align: center;
+  margin: 8px auto;
+}
+h5 {
+  font-size: 12px;
+  font-family: 'Noto Serif JP';
+  margin: 0 auto 48px;
+  padding: 0 0 24px;
+  width: 375;
+  text-align: center;
+  letter-spacing: .1em;
+  color: #223e69;
+}
+.formContents p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.typeRadio {
+  text-align: initial;
+}
+textarea {
+  height: 208px;
+}
+}
