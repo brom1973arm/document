@@ -1,0 +1,639 @@
+@charset "utf-8";
+
+body {
+    font-family: Noto Sans JP,sans-serif;
+    font-size: 16px;
+    background-color: #EDE0D4;
+}
+img {
+    max-width: 100%;
+}
+/* ヘッダーのCSS */
+header {
+    width: 375px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #EDE0D4;
+}
+.container {
+    display: flex;
+}
+header .hamburger {
+    position: absolute;
+    left: 12px;
+    top: 24px;
+}
+.hamburger img {
+    width: 25px;
+    height: 25px;
+}
+.mainLogo {
+    width: 62px;
+    height: 53px;
+    margin: 16px auto;
+}
+@media screen and (max-width: 768px) {
+    .pcImg {
+        display: none;
+    }
+}
+.loginIcon img {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    right: 62px;
+    top: 24px;
+}
+.cartIcon img {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    right: 15px;
+    top: 24px;
+}
+.login {
+    font-size: 10px;
+    position: absolute;
+    right: 54px;
+    top: 49px;
+}
+.cart {
+    font-size: 10px;
+    position: absolute;
+    right: 12px;
+    top: 49px;
+}
+.searchIcon {
+    border: 1px solid #7F5539;
+    width: 34px;
+    height: 37px;
+    /* position: absolute; */
+    /* left: 12px; */
+    /* top: 85px; */
+    padding: 9.74px 8px;
+    background-color: #D9D9D9;
+}
+.textSearch {
+    border: 1px solid #7F5539;
+    width: 318px;
+    height: 37px;
+    /* position: absolute; */
+    /* left: 45px; */
+    /* top: 85px; */
+    background-color: #ffffff;
+    font-size: 24px;
+    align-items: center;
+}
+.searchWindow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+/* メインのCSS */
+main {
+    background-color: #ffffff;
+    height: 1741px;
+}
+/* パンくずナビゲーション */
+.breadcrumbs {
+    display: flex;
+    color: #7F5539;
+    font-size: 12px;
+    padding: 12px 0 12px 20px;
+    text-transform: capitalize;
+}
+.breadcrumbs li::after{
+    content: '>';
+    display: inline-block;
+}
+.breadcrumbs li:last-child::after{
+    display: none;
+}
+.nav li {
+    font-size: 12px;
+}
+.border {
+    border: 1px solid #7F5539;
+}
+.welcome {
+    height: 36px;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: #7F5539;
+}
+/* カート情報 */
+.cartContents {
+    border: 2px solid #FFD233;
+    width: 335px;
+    height: 148px;
+    margin: 20px auto 20px;
+}
+.cartContents p {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.priceInfo {
+    display: flex;
+    justify-content: center;
+}
+.priceInfo p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.purchaseBtn {
+    background-color: #BF0000;
+    color: #ffffff;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 148px;
+    height: 36px;
+    margin: 0 auto;
+}
+/* 商品詳細 */
+.productImg {
+    width: 335px;
+    height: 335px;
+    margin: 0 auto 20px;
+}
+.productImg img {
+    width: 335px;
+    height: 335px;
+}
+.productExplanation p {
+    text-align: center;
+}
+.productName {
+    color: #7F5539;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0 20px 10px;
+}
+.price {
+    color: #BF0000;
+    margin-top: 20px;
+}
+.purchase {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+.purchase p {
+    padding-top: 4px;
+}
+.selectBox {
+    width: 56px;
+    height: 24px;
+    border: 1px solid #7F5539;
+    margin-left: 16px;
+    margin-right: 4px;
+}
+.count {
+    margin-right: 11.5px;
+    padding-top: 20px;
+}
+.recastBtn {
+    width: 140px;
+    height: 28px;
+    margin: 0 auto;
+    padding-top: 8px;
+    background-color: #CCCCCC;
+}
+.delete {
+    margin: 20px auto 40px;
+}
+.continueBtn {
+    background-color: #7F5539;
+    color: #ffffff;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 148px;
+    height: 36px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+/* フッターのCSS */
+footer {
+    background-color: #EDE0D4;
+}
+.footerNav p {
+    font-size: 12px;
+    color: #7F5539;
+    border-left: 2px solid #B392AC;
+    margin-left: 13px;
+    margin-top: 12px;
+    padding: 4px 36px 4px 12px;
+}
+.footerNav {
+    margin-top: 12px;
+}
+.snsIcon {
+    display: flex;
+    width: 142.9px;
+    height: 32px;
+    margin: 32px 220.1px 0 12px;
+    justify-content: space-between;
+}
+.footerLogo {
+    width: 72px;
+    height: 64px;
+    margin: 20px 12px 8px 291px;
+}
+footer .border {
+    border: 1px solid #7F5539;
+}
+.copyRight {
+    height: 34px;
+    text-align: center; 
+    padding-top: 12px;
+    font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+    /* ヘッダーのCSS */
+    .spImg {
+        display: none;
+    }
+   header {
+    width: initial;
+    height: 182px;
+   } 
+   .pcImg .hamburger img {
+    width: 50px;
+    height: 50px;
+    }
+    header .hamburger {
+        position: absolute;
+        left: 7%;
+        top: 32px;
+    }
+    .mainLogo {
+        display: none;
+    }
+    .loginIcon {
+        display: none;
+    }
+    .cartIcon {
+        display: none;
+    }
+    .pcMainLogo {
+        width: 87px;
+        margin: 0 auto 20px;
+        padding-top: 20px;
+    }
+    .pcLoginIcon img {
+        position: absolute;
+        right: 13%;
+        top: 32px;
+    }
+    .pcCartIcon img {
+        position: absolute;
+        right: 7%;
+        top: 32px;
+    }
+    .login {
+        font-size: 12px;
+        position: absolute;
+        right: 13%;
+        top: 74px;
+    }
+    .cart {
+        font-size: 12px;
+        position: absolute;
+        right: 7%;
+        top: 74px;
+    }
+    .searchIcon {
+        border: 1px solid #7F5539;
+        width: 40px;
+        height: 40px;
+        padding: 8px 8px;
+        background-color: #D9D9D9;
+    }
+    .textSearch {
+        border: 1px solid #7F5539;
+        width: 320px;
+        height: 40px;
+        background-color: #ffffff;
+        font-size: 24px;
+        align-items: center;
+    }
+    .search {
+        background-color: #B392AC;
+    }
+    .searchWindow {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 7%;
+        padding: 12px 0;
+    }
+    /* メインのCSS */
+    main {
+        width: initial;
+        /* height: 1874px; */
+        margin: 0 auto;
+    }
+    /* パンくずナビゲーション */
+    .breadcrumbs {
+        display: flex;
+        color: #7F5539;
+        font-size: 12px;
+        padding: 12px 0 12px 7.5%;
+        text-transform: capitalize;
+    }
+    .breadcrumbs li::after{
+        content: '>';
+        display: inline-block;
+        padding: 0 10px; /*左右に余白*/
+    }
+    .breadcrumbs li:last-child::after{
+        display: none;
+    }
+    .nav li {
+        font-size: 12px;
+    }
+    .border {
+        border: 1px solid #7F5539;
+    }
+    .welcome {
+        height: 36px;
+        font-size: 12px;
+        padding-top: 12px;
+        padding-left: 7.5%;
+    }
+    /* カート情報 */
+    .cartContents {
+        border: 2px solid #FFD233;
+        width: 1040px;
+        height: 240px;
+        margin: 80px auto 80px;
+    }
+    .cartContents p {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    .priceInfo {
+        display: flex;
+        justify-content: center;
+    }
+    .priceInfo p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .purchaseBtn {
+        font-size: 20px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 260px;
+        height: 52px;
+        margin: 0 auto;
+    }
+    /* 商品詳細 */
+    .productContainer {
+        margin-bottom: 80px; 
+    }
+    .productDetail {
+        width: 1200px;
+        height: 1722px;
+        margin: 20px auto 20px;
+    }
+    .purchase1 {
+        display: flex;
+        justify-content: center;
+    }
+    .purchase2 {
+        display: flex;
+        justify-content: center;
+    }
+    .productImg {
+        margin: initial;
+    }
+    .productExplanation {
+        width: 665px;
+        height: 316px;
+        margin-left: 40px;
+    }
+    .productExplanation p {
+        text-align: initial;
+    } 
+    .sentenceBorder {
+        border: 1px solid #E6CCB2;
+    }
+    .productName {
+        color: #7F5539;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0px 16px 0;
+    }
+    .price {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    .purchaseUnit {
+        display: flex;
+        justify-content: space-between;
+    }
+    .purchase {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
+    .purchase p {
+        padding-top: 14px;
+    }
+    .selectBox {
+        width: 80px;
+        height: 52px;
+        border: 1px solid #7F5539;
+        margin-left: 16px;
+        margin-right: 4px;
+    }
+    .count {
+        margin-right: 11.5px;
+        padding-top: 20px;
+    }
+    .recastBtn {
+        width: 160px;
+        height: 36px;
+        margin-right: 0;
+        padding-top: 8px;
+        padding-left: 50px;
+        background-color: #CCCCCC;
+        font-size: 20px;
+    }
+    .delete {
+        width: 80px;
+        height: 20px;
+        margin-right: 0;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .continueBtn {
+        background-color: #7F5539;
+        color: #ffffff;
+        font-size: 20px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 268px;
+        height: 52px;
+        margin: 40px auto 0;
+        text-align: center;
+    }
+    /* CCドーナツ 当店オリジナル（5個入り） */
+    /* .productDetail {
+        width: 1200px;
+        height: 772.8;
+        margin: 20px auto 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .productImg {
+        width: 540px;
+        height: 540px;
+        margin-top: 80px;
+        margin-right: 20px;
+    }
+    .productExplanation {
+        width: 460px;
+        height: 572.8px;
+        margin-top: 80px;
+        margin-left: 20px;
+    }
+    .sentenceBorder {
+        border: 1px solid #E6CCB2;
+    }
+    .explanation {
+        width: 435px;
+        height: 268.8px;
+        margin: 40px 21px 40px 4px;
+        font-size: 24px;
+        line-height: 1.6;
+        letter-spacing: -0.003em;
+    }
+    .price {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    .purchase {
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    .selectBox {
+        width: 80px;
+        height: 52px;
+        border: 1px solid #7F5539;
+        margin-right: 4px;
+    }
+    .count {
+        margin-right: 11.5px;
+        padding-top: 28px;
+        font-size: 24px;
+    }
+    .cartBtn {
+        background-color: #7F5539;
+        color: #ffffff;
+        font-size: 12px;
+        width: 148px;
+        height: 36px;
+        padding: 12px 32px;
+    }
+    .favoriteBtn {
+        width: 52px;
+        height: 52px;
+        border: 1px solid #7F5539;
+        padding: 12.54px 11.56px 10.57px 11.56px;
+        margin-left: 12px;
+    }
+    .cartBtn {
+        font-size: 20px;
+        width: 260px;
+        height: 52px;
+        padding: 16px 60px;
+    }
+    .productImg img {
+        width: 100%;
+    }
+    .productName {
+        font-size: 24px;
+        font-weight: bold;
+        width: 434px;
+        height: 24px;
+        margin: 4px 21px 20px 4px;
+        letter-spacing: -0.04em;
+    }
+    .price {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    .ranking .cartBtn {
+        font-size: 20px;
+        width: 260px;
+        height: 52px;
+        padding: 16px 60px;
+        margin: 20px auto;
+    }
+    .ranking img {
+        width: 100%;
+    } */
+    /* フッターのCSS */
+    footer {
+        position: relative;
+        height: 448px;
+    }
+    .footerNav {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 112px;
+    }
+    .footerNav p {
+        font-size: 16px;
+        padding: 12px 62px 12px 12px;
+    }
+    .pcSnsIcon {
+        display: flex;
+        width: 182.9px;
+        height: 32px;
+        justify-content: space-between;
+        position: absolute;
+        top: 324px;
+        left: 50%;
+        transform: translate(-50%,-50%);/* センター寄せの修正 */
+    }
+    .pcFooterLogo {
+        position: absolute;
+        top: 164px;
+        left: 50%;
+        width: 144px;
+        height: 128px;
+        transform: translate(-50%,-50%);/* センター寄せの修正 */
+    }
+    footer .border {
+        border: 1px solid #7F5539;
+        position: relative;
+        top: 324px;
+    }
+    .copyRight {
+        height: 52px;
+        text-align: center; 
+        padding-top: 12px;
+        position: absolute;
+        top: 416px;
+        left: 50%;
+        transform: translate(-50%,-50%);/* センター寄せの修正 */
+    }
+    .copyRight p {
+        font-size: 12px;
+    }
+}

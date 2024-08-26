@@ -1,0 +1,458 @@
+@charset "utf-8";
+
+body {
+    font-family: Noto Sans JP,sans-serif;
+    font-size: 16px;
+    background-color: #EDE0D4;
+}
+img {
+    max-width: 100%;
+}
+/* ヘッダーのCSS */
+header {
+    width: 375px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #EDE0D4;
+}
+.container {
+    display: flex;
+}
+header .hamburger {
+    position: absolute;
+    left: 12px;
+    top: 24px;
+}
+.hamburger img {
+    width: 25px;
+    height: 25px;
+}
+.mainLogo {
+    width: 62px;
+    height: 53px;
+    margin: 16px auto;
+}
+@media screen and (max-width: 768px) {
+    .pcImg {
+        display: none;
+    }
+}
+.loginIcon img {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    right: 62px;
+    top: 24px;
+}
+.cartIcon img {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    right: 15px;
+    top: 24px;
+}
+.login {
+    font-size: 10px;
+    position: absolute;
+    right: 54px;
+    top: 49px;
+}
+.cart {
+    font-size: 10px;
+    position: absolute;
+    right: 12px;
+    top: 49px;
+}
+.searchIcon {
+    border: 1px solid #7F5539;
+    width: 34px;
+    height: 37px;
+    /* position: absolute; */
+    /* left: 12px; */
+    /* top: 85px; */
+    padding: 9.74px 8px;
+    background-color: #D9D9D9;
+}
+.textSearch {
+    border: 1px solid #7F5539;
+    width: 318px;
+    height: 37px;
+    /* position: absolute; */
+    /* left: 45px; */
+    /* top: 85px; */
+    background-color: #ffffff;
+    font-size: 24px;
+    align-items: center;
+}
+.searchWindow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+/* メインのCSS */
+main {
+    background-color: #ffffff;
+    width: 375px;
+    height: 412px;
+    /* margin: 20px auto 21px; */
+}
+/* パンくずナビゲーション */
+.breadcrumbs {
+    display: flex;
+    color: #7F5539;
+    font-size: 12px;
+    padding: 12px 0 12px 20px;
+    text-transform: capitalize;
+}
+.breadcrumbs li::after{
+    content: '>';
+    display: inline-block;
+    padding: 0 10px; /*左右に余白*/
+}
+.breadcrumbs li:last-child::after{
+    display: none;
+}
+.nav li {
+    font-size: 12px;
+}
+.border {
+    border: 1px solid #7F5539;
+}
+.welcome {
+    height: 36px;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: #7F5539;
+}
+/* 会員登録者完了 */
+h1 {
+    font-size: 20px;
+    width: 120px;
+    height: 44px;
+    margin: 20px auto;
+    padding: 12px 0;
+    border-bottom: 2px solid #ffd233;
+}
+.completionFlame {
+    width: 295px;
+    height: 84px;
+    margin: 60px auto 20px;
+    border: 2px solid #f7d1cd;
+}
+.completionFlame p {
+    font-size: 12px;
+    width: 192px;
+    height: 12px;
+    margin: 20px auto 0;
+    color: #7F5539;
+    text-align: center;
+}
+.inputType {
+    font-size: 12px;
+    width: 84px;
+    height: 12px;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-bottom: 8px;
+}
+.textInput {
+    width: 271px;
+    height: 20px;
+    border: 1px solid #7F5539;
+    margin-left: 12px;
+}
+.submitBtn {
+    font-size: 16px;
+    width: 160px;
+    height: 48px;
+    color: #ffffff;
+    background-color: #7F5539;
+    margin: 40px auto 20px;
+    padding: 16px 32px 16px 32px;
+}
+.proceed {
+    color: #7F5539;
+    font-size: 12px;
+    width: 168px;
+    height: 12px;
+    margin: 0 40px 0px 167px;
+}
+.backToTop {
+    color: #7F5539;
+    font-size: 12px;
+    width: 132px;
+    height: 12px;
+    margin: 8px 40px 0 203px;
+}
+/* フッターのCSS */
+footer {
+    background-color: #EDE0D4;
+}
+.footerNav p {
+    font-size: 12px;
+    color: #7F5539;
+    border-left: 2px solid #B392AC;
+    margin-left: 13px;
+    margin-top: 12px;
+    padding: 4px 36px 4px 12px;
+}
+.footerNav {
+    margin-top: 12px;
+}
+.snsIcon {
+    display: flex;
+    width: 142.9px;
+    height: 32px;
+    margin: 32px 220.1px 0 12px;
+    justify-content: space-between;
+}
+.footerLogo {
+    width: 72px;
+    height: 64px;
+    margin: 20px 12px 8px 291px;
+}
+footer .border {
+    border: 1px solid #7F5539;
+}
+.copyRight {
+    height: 34px;
+    text-align: center; 
+    padding-top: 12px;
+    font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+    /* ヘッダーのCSS */
+    .spImg {
+        display: none;
+    }
+   header {
+    width: initial;
+    height: 182px;
+   } 
+   .pcImg .hamburger img {
+    width: 50px;
+    height: 50px;
+    }
+    header .hamburger {
+        position: absolute;
+        left: 7%;
+        top: 32px;
+    }
+    .mainLogo {
+        display: none;
+    }
+    .loginIcon {
+        display: none;
+    }
+    .cartIcon {
+        display: none;
+    }
+    .pcMainLogo {
+        width: 87px;
+        margin: 0 auto 20px;
+        padding-top: 20px;
+    }
+    .pcLoginIcon img {
+        position: absolute;
+        right: 13%;
+        top: 32px;
+    }
+    .pcCartIcon img {
+        position: absolute;
+        right: 7%;
+        top: 32px;
+    }
+    .login {
+        font-size: 12px;
+        position: absolute;
+        right: 13%;
+        top: 74px;
+    }
+    .cart {
+        font-size: 12px;
+        position: absolute;
+        right: 7%;
+        top: 74px;
+    }
+    .searchIcon {
+        border: 1px solid #7F5539;
+        width: 40px;
+        height: 40px;
+        padding: 8px 8px;
+        background-color: #D9D9D9;
+    }
+    .textSearch {
+        border: 1px solid #7F5539;
+        width: 320px;
+        height: 40px;
+        background-color: #ffffff;
+        font-size: 24px;
+        align-items: center;
+    }
+    .search {
+        background-color: #B392AC;
+    }
+    .searchWindow {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 7%;
+        padding: 12px 0;
+    }
+
+    /* メインのCSS */
+    main {
+        width: initial;
+        height: 3363px;
+        margin: 0 auto;
+    }
+    /* パンくずナビゲーション */
+    .breadcrumbs {
+        display: flex;
+        color: #7F5539;
+        font-size: 12px;
+        padding: 12px 0 12px 7.5%;
+        text-transform: capitalize;
+    }
+    .breadcrumbs li::after{
+        content: '>';
+        display: inline-block;
+        padding: 0 10px; /*左右に余白*/
+    }
+    .breadcrumbs li:last-child::after{
+        display: none;
+    }
+    .nav li {
+        font-size: 12px;
+    }
+    .border {
+        border: 1px solid #7F5539;
+    }
+    .welcome {
+        height: 36px;
+        font-size: 12px;
+        padding-top: 12px;
+        padding-left: 7.5%;
+    }
+    /* 商品一覧 */
+    h1 {
+        width: 128px;
+        height: 72px;
+        margin: 80px auto 80px;
+        font-size: 32px;
+        padding: 20px 0;
+    }
+    h2 {
+        width: 200px;
+        height: 24px;
+        margin: 80 auto;
+        font-size: 24px;
+    }
+    .mainMenu {
+        display: grid;
+        grid-template-rows: 738.2px;
+        grid-template-columns: 350px 350px 350px;
+        justify-content: space-evenly;
+        margin-bottom: 100px;
+    }
+    .varietySet {
+        display: grid;
+        grid-template-rows: 738.2px;
+        grid-template-columns: 350px 350px 350px;
+        justify-content: space-evenly;
+        margin-bottom: 100px;
+    }
+    .productName {
+        margin-top: 20px;
+        font-size: 24px;
+        width: 320px;
+        height: 76.8px;
+    }
+    .price {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    .cartBtn {
+        font-size: 20px;
+        width: 260px;
+        height: 52px;
+        padding: 16px 60px;
+        margin: 20px auto;
+    }
+    .mainMenu img {
+        width: 100%;
+    }
+    .varietySet img {
+        width: 100%;
+    }
+    .productName {
+        margin-top: 20px;
+        font-size: 24px;
+        width: 320px;
+        height: 76.8px;
+    }
+    .price {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    .ranking .cartBtn {
+        font-size: 20px;
+        width: 260px;
+        height: 52px;
+        padding: 16px 60px;
+        margin: 20px auto;
+    }
+    .ranking img {
+        width: 100%;
+    }
+    /* フッターのCSS */
+    footer {
+        position: relative;
+        height: 448px;
+    }
+    .footerNav {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 112px;
+    }
+    .footerNav p {
+        font-size: 16px;
+        padding: 12px 62px 12px 12px;
+    }
+    .pcSnsIcon {
+        display: flex;
+        width: 182.9px;
+        height: 32px;
+        justify-content: space-between;
+        position: absolute;
+        top: 324px;
+        left: 50%;
+        transform: translate(-50%,-50%);/* センター寄せの修正 */
+    }
+    .pcFooterLogo {
+        position: absolute;
+        top: 164px;
+        left: 50%;
+        width: 144px;
+        height: 128px;
+        transform: translate(-50%,-50%);/* センター寄せの修正 */
+    }
+    footer .border {
+        border: 1px solid #7F5539;
+        position: relative;
+        top: 324px;
+    }
+    .copyRight {
+        height: 52px;
+        text-align: center; 
+        padding-top: 12px;
+        position: absolute;
+        top: 416px;
+        left: 50%;
+        transform: translate(-50%,-50%);/* センター寄せの修正 */
+    }
+    .copyRight p {
+        font-size: 12px;
+    }
+}
