@@ -1,0 +1,663 @@
+@charset "utf-8";
+body {
+    font-family: "Noto Sans JP", "Noto Serif JP", sans-serif;
+    /* height: 4189.98px; */
+}
+/* メニューを画面上部に固定表示しています */
+.gMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+/* メニューアイコンを画面右上に固定しています */
+.gMenu .menu-icon {
+cursor: pointer;
+position: absolute;
+right: 10px;
+top: 16px;
+padding-top: 5px;
+height: 12px;
+}
+/* メニューアイコン（三本線）の真ん中の線です */
+.gMenu .menu-icon .navicon {
+background: #B71B26; /* 色は自由に変更可能です */
+display: block;
+height: 2px; /* 太さ */
+width: 31px; /* 長さ */
+position: relative;
+transition: background .4s ease-out; /* 形が変わる時のアニメーション */
+}
+/* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+.gMenu .menu-icon .navicon::before,
+.gMenu .menu-icon .navicon::after {
+background: #B71B26; /* 色は自由に変更可能です */
+content: '';
+display: block;
+height: 100%;
+position: absolute;
+transition: all .4s ease-out; /* 形が変わる時のアニメーション */
+width: 100%;
+}
+.gMenu .menu-icon .navicon::before {top: 10px;} /* 位置を上にずらしています */
+.gMenu .menu-icon .navicon::after {top: -10px;} /* 位置を下にずらしています */
+/* 表示されるメニューです */
+.gMenu .menu {
+background-color: rgba(255,255,255,0.9);
+overflow: hidden;
+max-height: 0; /* ★最初は高さを0にして非表示状態に */
+transition: max-height .6s; /* 表示されるときのアニメーション */
+text-align: center;
+}
+/* メニュー部分のデザインです */
+.gMenu .menu li:first-of-type {
+padding-top: 50px;
+}
+.gMenu .menu li a {
+display: block;
+padding: 24px 20px;
+text-decoration: none;
+text-transform: uppercase;
+}
+.gMenu .menu li a:hover {
+background-color: #f4f4f4;
+}
+/* チェックボックスは常に非表示です */
+.gMenu .menu-btn {
+display: none;
+}
+/* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+.gMenu .menu-btn:checked ~ .menu {
+max-height: 532px; /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+transition: max-height .6s;
+}
+/* メニューボタンの中央の線を非表示に */
+.gMenu .menu-btn:checked ~ .menu-icon .navicon {background: transparent;}
+
+/* メニューボタンの上下の線を45度傾けて✕印を作ります */
+.gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: rotate(-45deg);top: 0;}
+.gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: rotate(45deg);top: 0;}
+
+/* 表示されるメニューの高さを532pxに */
+.menu {
+    height: 532px;
+}
+@media screen and (max-width: 768px) {
+    .pcMenu {
+        display: none;
+    }
+}
+/* ヘッダーを上部に固定する */
+header {
+    height: 51.7px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: #ffffff;
+}
+.resizeimage img {
+    width: 100%;
+    margin-top: 51.7px;
+}
+@media screen and (max-width: 768px) {
+    .headerImgPc {
+        display: none;
+    }
+    .formContentsPc {
+        display: none;
+    }
+}
+.headerBand {
+    height: 51.71px;
+}
+h1 {
+    font-size: 18px;
+    color: #B71B26;
+    font-weight: bold;
+    height: 51.71px;
+    padding: 16px 0 16px 3%;
+}
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Noto Serif JP;
+    letter-spacing: .09em;
+}
+.title {
+    text-align: center;
+    text-transform: uppercase;
+}
+.subTitle {
+    font-size: 12px;
+    margin-top: 8px;
+}
+.subTitle2 {
+    margin-top: 24px;
+}
+/* サブタイトルの両サイドの線を擬似要素で */
+p.subTitle {
+    position: relative;
+}
+p.subTitle::before {
+    content: url(../images/line-1.png);
+    position: absolute;
+    left: 20%;
+    bottom: 2px;
+    width: 16%;
+}
+p.subTitle::after {
+    content: url(../images/line-1.png);
+    position: absolute;
+    left: 64%;
+    bottom: 2px;
+    width: 16%;
+}
+/* ＦＬＯＷセクションのサブタイトルを赤に */
+.flowSubTitle {
+    color: #B71B26;
+}
+
+p.flowSubTitle::before {
+    content: url(../images/line-1red.png);
+    position: absolute;
+    left: 23%;
+    bottom: 2px;
+    width: 16%;
+    color: #B71B26;
+}
+p.flowSubTitle::after {
+    content: url(../images/line-1red.png);
+    position: absolute;
+    left: 61%;
+    bottom: 2px;
+    width: 16%;
+    color: #B71B26;
+}
+.flowSubTitle {
+    font-size: 12px;
+    font-family: Noto Sans JP;
+    margin-top: 24px;
+}
+.conceptSentence {
+    font-size: 14px;
+    font-family: Noto Sans JP;
+    width: 94%;
+    margin: 16px auto 0;
+    line-height: 2;
+    letter-spacing: .06em;
+}
+#conceptSec h2 {
+    margin-top: 48px; 
+}
+/* ここからサービスセクション */
+#serviceSec {
+    margin-top: 80px;
+}
+.list {
+    width: 94%;
+    margin: 0 auto;
+}
+.listTitle {
+    font-family: Noto Serif JP;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 8px;
+}
+.listSentence {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+.more {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 8px;
+}
+.list1 img {
+    margin-top: 24px;
+}
+.list2 img {
+    margin-top: 48px;
+}
+.list3 img {
+    margin-top: 48px;
+}
+.moreList3 {
+    margin-bottom: 80px;
+}
+/* ここからフローセクション */
+#flowSec {
+    background-color: rgba(34,62,105,.05);
+    height: 456px;
+    padding-top: 16px;
+}
+.flow {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+.flow p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 3px 0;
+    font-size: 16px;
+    border-radius: 20px;
+    margin: 8px auto;
+}
+.triangle3-1 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.6);
+  margin: 0 auto;
+}
+.triangle3-2 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.7);
+  margin: 0 auto;
+}
+.triangle3-3 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.8);
+  margin: 0 auto;
+}
+.triangle3-4 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,0.9);
+  margin: 0 auto;
+}
+.triangle3-5 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(183,27,38,1);
+  margin: 0 auto;
+}
+/* ここから問い合わせセクション */
+#faqSec {
+    padding-top: 80px;
+}
+.qa {
+    width: 93%;
+    margin: 24px auto 80px;
+}
+.qMark {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #333333;
+    color: #ffffff;
+    display: inline;
+    padding: 2px 5px;
+    border-radius: 52%;
+    text-transform: uppercase;
+    font-family: 'Noto Serif JP'; 
+    width: 36px;
+    height: 36px;
+}
+.aMark {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #b71b26;
+    color: #ffffff;
+    display: inline;
+    padding: 2px 5px;
+    border-radius: 52%;
+    text-transform: uppercase;
+    font-family: 'Noto Serif JP'; 
+    width: 36px;
+    height: 36px;
+}
+.qa1 {
+    margin-bottom: 24px;
+}
+.qa1Q {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+}
+.question {
+    padding-left: 8px;
+}
+.qa1A {
+    display: flex;
+    justify-content: flex-start;
+}
+.answer {
+    padding-left: 8px;
+}
+/* ここからフォームセクション */
+#contactSec {
+    background-color: rgba(34, 62, 105, .15);
+    padding-top: 16px;
+}
+.formContents {
+    width: 93%;
+    margin: 24px auto 0;
+    font-weight: bold;
+}
+.kinds {
+    text-align: center;
+    margin-top: 24px;
+}
+.kindsPost {
+    margin-top: 7.89px;
+}
+#contactSec span {
+    color: #ffffff;
+    background-color: #B71B26;
+    border-radius: 25%;
+    font-size: 9px;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-bottom: 8px;
+    padding: 4px 9.5px;
+    letter-spacing: .2em;
+    height: 0.4%;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 10px;
+    text-align: start;
+}
+input[type="postalCode"] {
+    width: 33%;
+    height: 0.7%;
+    text-align: start;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    margin-left: 4px;
+}
+textarea {
+    height: 120px;
+}
+.submitBtn {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px;
+    font-family: 'Noto Serif JP';
+}
+input[type="submit"] {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 16px;
+    margin: 16px;
+}
+/* ここからフッター */
+footer {
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #333333;
+    height: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pageTop {    
+    position: fixed;
+    right: 3%;
+    bottom: 46.02px;
+    width: 46px;
+    height: 46px;
+    z-index: 99;
+    background-color: #333333;
+}
+.pageTop img {
+    padding: 15.89px 8px 15.11px 8px;
+    text-align: center;
+}
+@media screen and (min-width: 768px) {
+    header {
+        height: 80.85px;
+    }
+    .headerImgPc img {
+        width: 100%;
+        margin-top: 80.85px;
+    }
+    h1 {
+        font-size: 25px;
+        height: 80.85px;
+        padding: 24px 0 24px 2%;
+        width: 35%;
+    }
+    .gMenu {
+        display: none;
+    }
+    .wMenu {
+        position: fixed;
+        right: 2%;
+        top: 32.42px;
+        width: 46%;
+        font-family: Noto serif Jp;
+        font: 16px;
+    }
+    .pcMenu {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .headerImg {
+        display: none;
+    }
+    .headerImgPc {
+        width: 100%;
+    }
+    h2 {
+        font-size: 42px;
+        letter-spacing: .09em;
+    }
+    .title {
+        font-size: 42px;
+    }
+    .subTitle {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+    .subTitle2 {
+        margin-top: 48px;
+        font-size: 28px;
+    }
+    p.subTitle::before {
+        left: 42%;
+        bottom: 4px;
+        width: 4.4%;
+    }
+    p.subTitle::after {
+        left: 53.7%;
+        bottom: 4px;
+        width: 4.4%;
+    }
+    #conceptSec h2 {
+        margin-top: 160px; 
+    }
+    .conceptSentence {
+        font-size: 16px;
+        width: 74.7%;
+        margin: 24px auto 0;
+    }
+    /* サービスセクションを横並びに */
+    .wrapper {
+        display: flex;
+        /* justify-content: space-evenly; */
+        width: 74.6%;
+        margin: 0 auto 150px;
+    }
+    .list {
+        width: 29.4%;
+    }
+    .listTitle {
+        font-size: 24px;
+        margin-top: 8px;
+    }
+    .list1 img {
+        margin-top: 48px;
+    }
+    .listSentence {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-top: 16px;
+    }
+    .more {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+    .moreList3 {
+        margin-bottom: 0;
+    }
+    .triangle3-1 {
+      margin-left: 20px;
+      margin-top: 150px;
+      transform: rotate(-90deg)
+    }
+    .triangle3-2 {
+      margin-left: 20px;
+      margin-top: 150px;
+      transform: rotate(-90deg);
+    }
+    .triangle3-3 {
+      margin-left: 20px;
+      margin-top: 150px;
+      transform: rotate(-90deg);
+    }
+    .triangle3-4 {
+      margin-left: 20px;
+      margin-top: 150px;
+      transform: rotate(-90deg);
+    }
+    .triangle3-5 {
+      margin-left: 20px;
+      margin-top: 150px;
+      transform: rotate(-90deg);
+    }
+    #flowSec {
+        height: 498px;
+        padding-top: 16px;
+    }
+    .flow {
+      display:flex;
+      justify-content: center;
+      align-items: stretch;
+      margin-bottom: 48px;
+      width: 67.3%;
+      margin: 48px auto;
+    }
+    .flow p {
+      padding: 97px 16px;
+      font-size: 16px;
+      border-radius: 20px;
+      margin: 8px 20px;
+      width: 60px;
+      height: 280px;
+    }
+    #faqSec {
+        padding-top: 160px;
+    }
+    .qa {
+        width: 75%;
+        margin: 48px auto 160px;
+    }
+    .qMark {
+        font-size: 34px;
+        padding-top: 3.64px;
+        padding-left: 9px;
+        width: 52px;
+        height: 52px;
+    }
+    .aMark {
+        font-size: 34px;
+        padding-top: 3.64px;
+        padding-left: 9px;
+        width: 52px;
+        height: 52px;
+    }
+    .qa1 {
+        margin-bottom: 58px;
+    }
+    .qa1Q {
+        margin-bottom: 28px;
+    }
+    .question {
+        font-weight: 300;
+        font-size: 20px;
+        padding: 8.36px 0 8px 8px;
+    }
+    .answer {
+        font-weight: 300;
+        font-size: 20px;
+        padding: 8.36px 0 8px 8px;
+    }
+    #contactSec {
+        background-color: rgba(34, 62, 105, 0.15);
+        height: 1218px;
+    }
+    .formContents {
+        display: none;
+    }
+    form {
+        padding-top: 48px;
+    }
+    .formContentsPc {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 74.7%;
+        height: 1000px;
+        margin: 47.64px auto 48.36px;
+        margin-top: 47.64px;
+        margin-bottom: 48.36px;
+    }
+    .kinds {
+        margin-top: 24px;
+        height: 52px;
+    }
+    .kinds1,.kinds2,.kinds3,.kinds4,
+    .kinds5,.kinds6,.kinds7,.kinds8 {
+        display: flex;
+    }
+    .kindsAddress {
+        margin-left: 24vw;
+    }
+    .kindsTitle {
+        width: 24vw;
+        text-align: end;
+        line-height: 52px;
+    }
+    .kindsInput {
+        width: 49vw;
+        text-align: start;
+        padding-left: 12px;
+    }
+    .space {
+        padding-right: 3.5vw;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="radio"] {
+        height: 52px;
+    }
+    input[type="postalCode"] {
+        width: 33%;
+        height: 52px;
+    }
+    .kindsPc {
+        margin-top: 96px;
+    }
+}
